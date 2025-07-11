@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Manuale:ital,wght@0,300..800;1,300..800&family=Parkinsans:wght@300..800&family=Poppins:wght@400;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+@font-face {
+  font-family: "Asterion";
+  src: url("assets/asterion.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roclette";
+  src: url("assets/RoclettePro-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RocletteNorm";
+  src: url("assets/RoclettePro-Normal.ttf") format("truetype");
+}
+
+
+
+
+:root {
+  --primary-color: #d8d5d8;
+  --secondary-color: #adacb5;
+  --text-color: #2d3142;
+
+  --header-font: "RocletteNorm";
+  --body-font: "Parkinsans", sans-serif;
+  --alt-font: "Roclette";
+  --logo-font: "Black Ops One", cursive;
+}
+
+.main-cont {
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@keyframes shrinkHeader {
+  to {
+    justify-content: space-between;
+    height: 3em;
+  }
+}
+
+@keyframes shrinkTitle {
+  to {
+    font-size: 2rem;
+  }
+}
+
+
+.name{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.namecol{
+  color: rgb(180, 14, 14);
+}
+
+.about{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2d3142;
+}
+
+@media (max-width: 1600px) {
+ header{
+  height: 3em;
+  width: 70%;
+  position: fixed;
+  top: 0.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7em;
+ }
+
+ header a{
+  text-decoration: none;
+  font-family: var(--header-font);
+  color: var(--text-color);
+  font-size: 1.2rem;
+ }
+
+ .hero{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--text-color);
+ }
+
+  lord-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+ .hero h1{
+  font-size: 6rem;
+  font-family: var(--alt-font);
+  display: flex;
+  align-items: center;
+ }
+
+ .hero h2{
+  font-size: 6rem;
+  font-family: var(--alt-font);
+
+ }
+
+ .hero p{
+  font-size: 1.5rem;
+  color: #323338;
+  font-family: var(--body-font);
+ }
+
+ .about h1{
+  font-size: 6em;
+  font-family: var(--alt-font);
+  color: #d8d5d8;
+  text-align: center;
+ }
+
+ .pictures{
+    height: 300px;
+    max-width: 900px;
+    position: relative;
+    display: flex;
+    padding: 2em 0;
+    justify-content: center;
+  }
+
+  .img-cont{
+    height: 250px;
+    width: 250px;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--text-color);
+  }
+
+  .img-cont.left{
+    transform: rotate(-10deg);
+  }
+
+  .img-cont.middle{
+    z-index: 2;
+  }
+
+  .img-cont.right{
+    transform: rotate(10deg);
+  }
+
+  .img-cont img{
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+    filter: grayscale(80%);
+  }
+
+  .me-info{
+    width: 50%;
+    font-size: 1.5rem;
+    color: #adacb5;
+    padding: 2em 0;
+    text-align: center;
+    font-family: var(--header-font);
+  }
+
+  
+
+}
+
+@media (max-width: 800px) {
+  .pictures{
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-cont{
+    height: 150px;
+    min-width: 150px;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .hero h1{
+    font-size: 3rem;
+  }
+
+  .hero h2{
+    font-size: 3rem;
+  }
+
+  lord-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .me-info{
+    font-size: 1rem;
+    padding: 0;
+    width: 90%;
+  }
+
+}
