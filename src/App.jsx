@@ -1,6 +1,21 @@
 import React from "react";
 import "./App.css";
 import me from "./assets/me.jpg";
+import asana from "./assets/images/asana.png";
+import gpt from "./assets/images/chatgpt.png";
+import dropbox from "./assets/images/dropbox.png";
+import excel from "./assets/images/excel.png";
+import github from "./assets/images/github.png";
+import gmail from "./assets/images/gmail.png";
+import calendar from "./assets/images/google-calendar.png";
+import drive from "./assets/images/google-drive.png";
+import meet from "./assets/images/meet.png";
+import sheets from "./assets/images/sheets.png";
+import slack from "./assets/images/slack.png";
+import trello from "./assets/images/trello.png";
+import word from "./assets/images/word.png";
+// import asana from "./assets/images/asana.png";
+// import asana from "./assets/images/asana.png";
 
 function App() {
   return (
@@ -50,6 +65,86 @@ function App() {
               management skills. Proven capacity to quickly learn new
               technologies and thrive in fast-paced environments.
             </p>
+          </div>
+        </div>
+
+        <div className="skills">
+          <h1>MY SKILLS</h1>
+
+          <div className="skillset">
+            <div className="skill">
+              <lord-icon
+                src="https://cdn.lordicon.com/apmrcxtj.json"
+                trigger="hover"
+                colors="primary:#2d3142,secondary:#2d3142"
+              ></lord-icon>
+              <h1>EMAIL MANAGEMENT</h1>
+              <div className="tools">
+                  <img src={gmail} alt="" />
+              </div>
+            </div>
+            <div className="skill">
+              <lord-icon
+                src="https://cdn.lordicon.com/fikcyfpp.json"
+                trigger="hover"
+                colors="primary:#121331,secondary:#2d3142"
+              ></lord-icon>
+              <h1>DATA ENTRY</h1>
+              <div className="tools">
+                <img src={word} alt="" />
+                <img src={sheets} alt="" />
+                <img src={excel} alt="" />
+              </div>
+            </div>
+            <div className="skill">
+              <lord-icon
+                src="https://cdn.lordicon.com/tsrgicte.json"
+                trigger="hover"
+                colors="primary:#2d3142,secondary:#2d3142"
+              ></lord-icon>
+              <h1>FILE MANAGEMENT</h1>
+              <div className="tools">
+                <img src={drive} alt="" />
+                <img src={dropbox} alt="" />
+              </div>
+            </div>
+            <div className="skill">
+              <lord-icon
+                src="https://cdn.lordicon.com/wjyqkiew.json"
+                trigger="hover"
+                colors="primary:#2d3142,secondary:#2d3142"
+              ></lord-icon>
+              <h1>RESEARCHING</h1>
+              <div className="tools">
+                <img src={gpt} alt="" />
+              </div>
+            </div>
+            <div className="skill">
+              <lord-icon
+                src="https://cdn.lordicon.com/cfoaotmk.json"
+                trigger="hover"
+                colors="primary:#121331,secondary:#2d3142">
+              </lord-icon>
+              <h1>OTHERS</h1>
+              <div className="tools">
+                <img src={github} alt="" />
+                <img src={calendar} alt="" />
+                <img src={meet} alt="" />
+              </div>
+            </div>
+            <div className="skill">
+              <lord-icon
+                src="https://cdn.lordicon.com/bsmnglum.json"
+                trigger="hover"
+                colors="primary:#121331,secondary:#2d3142"
+              ></lord-icon>
+              <h1>TASK MANAGEMENT</h1>
+              <div className="tools">
+                <img src={trello} alt="" />
+                <img src={slack} alt="" />
+                <img src={asana} alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
