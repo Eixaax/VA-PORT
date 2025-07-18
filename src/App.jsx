@@ -147,6 +147,32 @@ function App() {
             </div>
           </div>
         </div>
+
+        <div className="why-cont">
+          <h1>Why you should hire me</h1>
+
+          <div className="why-me-info">
+            <div className="why-me">
+              <div className="img-cont">
+                <img src={me} alt="" />
+              </div>
+            </div>
+            <div className="why-info">
+              <div className="info">
+                <strong>Tech-Savvy</strong>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Proficient in using various software applications and online tools — the internet is my turf and digital platforms feel second nature.</p>
+              </div>
+              <div className="info">
+                <strong>Adaptive</strong>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quick to adjust to new tasks, tools, or environments; thrives in fast-changing or unfamiliar situations.</p>
+              </div>
+              <div className="info">
+                <strong>Fast Learner</strong>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Able to absorb new information and skills rapidly, often requiring little to no repetition or guidance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
