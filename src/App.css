@@ -70,6 +70,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 7em;
+  visibility: hidden;
 }
 
 header a {
@@ -87,6 +88,16 @@ header a {
   justify-content: center;
   flex-direction: column;
   color: var(--text-color);
+  position: relative;
+  z-index: 1;
+  transition: all 1s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.hero.page {
+  visibility: visible;
+  opacity: 1;
 }
 
 lord-icon {
@@ -99,8 +110,19 @@ lord-icon {
   font-family: var(--alt-font);
   display: flex;
   align-items: center;
+  animation: fadeup 1s forwards;
 }
 
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .hero h2 {
   font-size: 10rem;
   font-family: var(--alt-font);
@@ -111,23 +133,31 @@ lord-icon {
   color: #323338;
   font-family: var(--body-font);
   padding-top: 1em;
+  animation: fadeup 2s forwards;
 }
 
-.about h1, .why-cont h1{
+.about h1,
+.why-cont h1,
+.contact h1 {
   font-size: 10rem;
   font-family: var(--alt-font);
   color: #d8d5d8;
   text-align: center;
 }
 
-.why-cont h1{
-    padding-top: 0.5em;
+.why-cont h1, .contact h1 {
+  padding-top: 0.5em;
+}
+
+.contact h1{
+  color: #2d3142;
 }
 
 .name {
   display: flex;
   flex-direction: row;
   gap: 3em;
+  animation: fadeup 1.5s forwards;
 }
 
 .namecol {
@@ -141,6 +171,15 @@ lord-icon {
   flex-direction: column;
   align-items: center;
   background-color: #2d3142;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.about.page {
+  visibility: visible;
+  opacity: 1;
 }
 
 .about .pictures {
@@ -204,7 +243,6 @@ lord-icon {
   filter: grayscale(0%);
 }
 
-
 .me-info {
   width: 50%;
   font-size: 2.5rem;
@@ -222,6 +260,39 @@ lord-icon {
   align-items: center;
   background-color: #adacb5;
   margin: 1em 0;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s ease;
+}
+
+.skills.page {
+  visibility: visible;
+  opacity: 1;
+}
+
+.skills.page .skill {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills.page .skill:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.skills.page .skill:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.skills.page .skill:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.skills.page .skill:nth-child(4) {
+  transition-delay: 0.8s;
+}
+.skills.page .skill:nth-child(5) {
+  transition-delay: 1s;
+}
+.skills.page .skill:nth-child(6) {
+  transition-delay: 1.2s;
 }
 
 .skills h1 {
@@ -243,6 +314,9 @@ lord-icon {
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
 }
 
 .tools {
@@ -264,39 +338,45 @@ lord-icon {
   color: var(--text-color);
 }
 
-.why-cont{
+.why-cont {
   height: 100vh;
   width: 100%;
   background-color: #2d3142;
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  z-index: 2;
+  transition: all 1s ease;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.why-me-info{
+.why-cont.page {
+  visibility: visible;
+  opacity: 1;
+}
+.why-me-info {
   height: 100%;
   width: 80%;
   display: flex;
   flex-direction: row;
 }
 
-.why-me{
+.why-me {
   height: 100%;
   width: 50%;
   align-items: center;
   justify-content: center;
   display: flex;
-
 }
 
-.why-me img{
+.why-me img {
   height: 70%;
   width: 70%;
   object-fit: contain;
 }
 
-.why-info{
+.why-info {
   height: 100%;
   width: 50%;
   display: flex;
@@ -304,30 +384,109 @@ lord-icon {
   flex-direction: column;
 }
 
-.info{
+.info {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
 }
 
-.info strong{
+.info strong {
   color: var(--primary-color);
   font-family: var(--alt-font);
-  
 }
 
-.info p{
+.info p {
   color: var(--secondary-color);
-    font-family: var(--header-font);
+  font-family: var(--header-font);
+}
+
+.why-cont .img-cont {
+  transform: rotate(-10deg);
+  border-radius: 30px 0 30px 0;
+}
+
+.contact {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+  transition: all 1s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.contact.page {
+  visibility: visible;
+  opacity: 1;
+}
+
+.contact-info {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  color: var(--text-color);
+  font-family: var(--header-font);
+    font-size: 1.5rem;
 
 }
 
-.why-cont .img-cont{
-    transform: rotate(-10deg);
-    border-radius: 30px 0 30px 0;
 
+.contact-info .contact-button{
+  text-decoration: none;
+  height: 3em;
+  padding: 1em;
+  font-size: 1rem;
+  font-family: var(--alt-font);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: whitesmoke;
+  outline: none;
+  border-radius: 5px;
+  color: var(--title-color);
+  transition: all 0.5s ease;
+  border: none;
+  gap: 5px;
 }
+
+.contact-info .contact-button:hover{
+  background-color: var(--title-color);
+  color: white;
+  border: none;
+}
+
+.links{
+  display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 50px;
+    color: #2d3142;
+}
+
+.links .social-icon{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  color: #2d3142;
+  width: auto;
+  transition: all 0.5s ease;
+}
+
+
+.links .social-icon:hover{
+  color: var(--title-color);
+  transform: translateY(-15px);
+}
+
 
 @media (max-width: 1600px) {
   .name {
@@ -357,7 +516,7 @@ lord-icon {
     font-family: var(--body-font);
   }
 
-  .about h1{
+  .about h1 {
     font-size: 6rem;
     text-align: center;
   }
@@ -420,7 +579,7 @@ lord-icon {
     width: 150px;
   }
 
-  .why-cont h1{
+  .why-cont h1, .contact h1 {
     font-size: 4rem;
   }
 }
@@ -450,16 +609,16 @@ lord-icon {
     font-size: 3rem;
   }
 
-  .pictures{
-    height: 300PX;
+  .pictures {
+    height: 300px;
     width: 300px;
   }
 
-  .why-cont h1{
+  .why-cont h1 {
     font-size: 2rem;
   }
 
-  .img-cont{
+  .img-cont {
     height: 150px;
     min-width: 150px;
   }
@@ -509,11 +668,11 @@ lord-icon {
     padding: 0 0;
   }
 
-  .why-cont{
+  .why-cont {
     height: 100%;
   }
 
-  .why-me-info{
+  .why-me-info {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -521,28 +680,36 @@ lord-icon {
     align-items: center;
   }
 
-  .why-me{
+  .why-me {
     height: 250px;
     width: 250px;
   }
 
-  .why-me .img-cont  {
+  .why-me .img-cont {
     height: 200px;
     width: 200px;
     object-fit: contain;
   }
 
-  .why-info{
+  .why-info {
     height: 100%;
     width: 70%;
     gap: 20px;
+    padding: 1em 0;
   }
 
-  .info{
+  .info {
     font-size: 1rem;
   }
 
+  .contact-info{
+    font-size: 1rem;
+    width: 80%;
+  }
+}
 
-
- 
+@media (max-width: 480px) {
+  .contact h1{
+    font-size: 3rem;
+  }
 }
