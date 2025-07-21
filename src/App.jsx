@@ -4,6 +4,10 @@ import { useEffect, useState, useRef } from "react";
 import "./App.css";
 import "./modal-styles.css";
 import me from "./assets/me.jpg";
+
+import barong from "./assets/images/barong.jpg";
+import formal from "./assets/images/formal.jpg";
+import wacky from "./assets/images/wacky.jpg";
 import asana from "./assets/images/asana.png";
 import gpt from "./assets/images/chatgpt.png";
 import dropbox from "./assets/images/dropbox.png";
@@ -210,13 +214,13 @@ function App() {
           <h1>About me</h1>
           <div className="pictures">
             <div className="img-cont left">
-              <img src={me || "/placeholder.svg"} alt="" />
+              <img src={barong || "/placeholder.svg"} alt="" />
             </div>
             <div className="img-cont middle">
-              <img src={me || "/placeholder.svg"} alt="" />
+              <img src={formal || "/placeholder.svg"} alt="" />
             </div>
             <div className="img-cont right">
-              <img src={me || "/placeholder.svg"} alt="" />
+              <img src={wacky || "/placeholder.svg"} alt="" />
             </div>
           </div>
           <div className="me-info">
